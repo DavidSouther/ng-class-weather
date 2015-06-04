@@ -19,13 +19,7 @@ html(lang='en', ng-app='rupert-app')
     script(src="socket.io/socket.io.js")
 
   body
-    //- Put your main content here
-    //- .container //- bootstrap
-    //- .container-fluid //- Bootstrap Responsive
-    //- ion-nav-view //- Root for an ionic layout
-
-    //- Uncomment below for cordova Mobile support
-    //- script(src="cordova.js")
+    div(ng-view)
 
     script(src="templates.js")
     script(src="application.js")

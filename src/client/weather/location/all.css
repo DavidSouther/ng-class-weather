@@ -1,0 +1,7 @@
+weather-location {
+  padding: 2px;
+  border: 1px black solid;
+  border-radius: 2px;
+  margin-bottom: 18px;
+  display: block;
+}

@@ -1,0 +1,23 @@
+<div>
+  <div class="row" ng-click="fullForecast = !fullForecast">
+    <div class="col-sm-4">
+      <b>Location: </b>
+      {{ location.name }}
+    </div>
+    <div class="col-sm-4">
+      <b>Weather: </b>
+      {{ location.weather[0].main }}
+    </div>
+    <div class="col-sm-4">
+      <b>Temperature: </b>
+      {{ location.main.temp | temperature }}
+    </div>
+  </div>
+  <div class="row" ng-show="fullForecast">
+    <div class="col-sm-2" ng-repeat="item in forecast.list.slice(0, 6)">
+      <b>{{ item.date | date:'EEEE' }}</b><br />
+      <b>High: </b> {{ item.temp.max | temperature }}<br />
+      <b>Low: </b> {{ item.temp.min | temperature }}<br />
+    </div>
+  </div>
+</div>

@@ -1,0 +1,13 @@
+<div class="container">
+  <form name="locationForm" ng-submit="search()" class="form-inline">
+    <div class="form-group">
+      <label for="locationInput">Location:</label>
+      <input name="locationInput" class="form-control" type="text" ng-model="location" placeholder="Plano, TX" />
+    </div>
+    <button type="submit" class="btn btn-default">Search!</button>
+  </form>
+
+  <div ng-repeat="location in searches">
+    <weather-location current="location"></weather-location>
+  </div>
+</div>
